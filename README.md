@@ -14,9 +14,9 @@ The Marchenko method involves several key equations to estimate Green's function
 
 ---
 
-### **1. Initial Focusing Functions (Section 4)**
+### **1. Initial Focusing Functions**
 
-#### a. Downgoing focusing function $f_0^+$ :
+#### a. Downgoing focusing function $f_0^+$:
 
 $$
 f_0^+(\mathbf{x}_f, \mathbf{x}_s, t) = T_d(\mathbf{x}_r, \mathbf{x}_f, -t) \tag{1}
@@ -30,7 +30,7 @@ $$
 - Implementation: Time reversal of direct arrival (Time-reversed direct arrival)
 
 
-#### b. Upgoing focusing function $f_0^-$ :
+#### b. Upgoing focusing function $f_0^-$:
 
 $$
 f_0^-(\mathbf{x}_r, \mathbf{x}_f, t) = \Theta(t) \ast \int_S R(\mathbf{x}_r, \mathbf{x}_s, t) \ast f_0^+(\mathbf{x}_f, \mathbf{x}_s, t)  d\mathbf{x}_s
@@ -44,15 +44,17 @@ $$
 
 ---
 
-### **2. Iterative Focusing Functions (Section 5)**
+### **2. Iterative Focusing Functions**
 
 For k = 1 to N iterations:
 - Downgoing component:
+  
 $$
 m_{k}^{+}(\mathbf{x}_f, \mathbf{x}_s, t) = \Theta(t) \ast \int_S R(\mathbf{x}_r, \mathbf{x}_s, t) \ast f_{k-1}^{-}(\mathbf{x}_r, \mathbf{x}_f, -t) d\mathbf{x}_r
 $$
 
 For the first iteration, for instance,
+
 $$
 m_{1}^{+}(\mathbf{x}_f, \mathbf{x}_s, t) = \Theta(t) \ast \int_S R(\mathbf{x}_r, \mathbf{x}_s, t) \ast f_{0}^{-}(\mathbf{x}_r, \mathbf{x}_f, -t) d\mathbf{x}_r
 $$
@@ -64,13 +66,14 @@ Implementation: Convolve reflectivity and (time-reversed) fk_minus
 ---
 
 - Updating upgoing function:
-  $$
-  f_{k}^{-}(\mathbf{x}_r, \mathbf{x}_f, t) = f_{0}^{-}(\mathbf{x}_r, \mathbf{x}_f, t) + \Theta(t) \ast \int_S R(\mathbf{x}_r, \mathbf{x}_s, t) \ast m_{k}^{+}(\mathbf{x}_f, \mathbf{x}_s, -t) d\mathbf{x}_s
-  $$
+  
+$$
+f_{k}^{-}(\mathbf{x}_r, \mathbf{x}_f, t) = f_{0}^{-}(\mathbf{x}_r, \mathbf{x}_f, t) + \Theta(t) \ast \int_S R(\mathbf{x}_r, \mathbf{x}_s, t) \ast m_{k}^{+}(\mathbf{x}_f, \mathbf{x}_s, -t) d\mathbf{x}_s
+$$
 
-    $$
-    f_k^-(\mathbf{x}_r, \mathbf{x}_f, t) = \Theta(t) \ast \left[f_0^-(\mathbf{x}_r, \mathbf{x}_f, t) + \int R(\mathbf{x}_r, \mathbf{x}_s, t) \ast m_k^+(\mathbf{x}_f, \mathbf{x}_s, -t) \, d\mathbf{x}_s \right]  \tag{4}
-    $$
+$$
+f_k^-(\mathbf{x}_r, \mathbf{x}_f, t) = \Theta(t) \ast \left[f_0^-(\mathbf{x}_r, \mathbf{x}_f, t) + \int R(\mathbf{x}_r, \mathbf{x}_s, t) \ast m_k^+(\mathbf{x}_f, \mathbf{x}_s, -t) \, d\mathbf{x}_s \right] 
+$$
     
 - Downgoing function update:
   
