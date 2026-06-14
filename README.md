@@ -83,7 +83,7 @@ f_k^+( \mathbf{x}_f, \mathbf{x}_s, t) = f_0^+( \mathbf{x}_f, \mathbf{x}_s, t) + 
 $$
 
 $$
-f_k^+( \mathbf{x}_f, \mathbf{x}_s, t) = f_0^+( \mathbf{x}_f, \mathbf{x}_s, t) + \Theta(t) \ast \int_S R( \mathbf{x}_r, \mathbf{x}_s, t) \ast f_{k-1}^-(\mathbf{x}_r, \mathbf{x}_f, -t)  d\mathbf{x}_r \tag{5}
+f_k^+( \mathbf{x}_f, \mathbf{x}_s, t) = f_0^+( \mathbf{x}_f, \mathbf{x}_s, t) + \Theta(t) \ast \int_S R( \mathbf{x}_r, \mathbf{x}_s, t) \ast f_{k-1}^-(\mathbf{x}_r, \mathbf{x}_f, -t)  d\mathbf{x}_r
 $$
 
 - Where $k$ = Iteration index
