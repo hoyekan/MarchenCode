@@ -246,6 +246,64 @@ In summary, Marchenko methods allow for the reconstruction of $G(t, \mathbf{x}_r
 - An estimate of the direct arrival
 - A time window (causality constraint)
 
+---
+
+## Marchenko-based imaging using decomposed Green’s functions
+
+### **Theoretical Expression for Marchenko Imaging**
+
+The code below implements **Marchenko-based imaging** using **decomposed Green’s functions**, specifically the **upgoing Green’s function** $g^-$ and the **downgoing direct arrival** (approximated as $f_0^+$).
+
+---
+
+The **Marchenko zero-lag cross-correlation imaging condition** is represented by this:
+
+$$
+I(\mathbf{x}_f) = \sum_{\mathbf{x}_r} \int dt \, f_0^+(\mathbf{x}_f, \mathbf{x}_r, t) \cdot g^-(\mathbf{x}_r, \mathbf{x}_f, t)
+$$
+
+where:
+
+* $I(\mathbf{x}_f)$ is the image at the **focusing location,** $\mathbf{x}_f$
+* $f_0^+(\mathbf{x}_f, \mathbf{x}_r, t)$: This is the downgoing focusing function focused at the focal point. It is **time-reversed direct arrival** from the focal point to the receiver
+* $g^-(\mathbf{x}_r, \mathbf{x}_f, t)$: **upgoing Green’s function** from the focal point to the receiver
+* $\sum_{\mathbf{x}_r} \int dt$: summation over receivers and time
+* The dot product implies **zero-lag temporal correlation**
+
+This is equivalent to:
+
+$$
+I(\mathbf{x}_f) = \int_S \int_{-\infty}^{\infty} f_0^+(\mathbf{x}_f, \mathbf{x}_r, t) \cdot g^-(\mathbf{x}_r, \mathbf{x}_f, t) \, dt \, d\mathbf{x}_r
+$$
+
+#### Recall that downgoing focusing function $f_0^+$ :
+
+$$
+f_0^+(\mathbf{x}_f, \mathbf{x}_r, t) = T_d(\mathbf{x}_r, \mathbf{x}_f, -t)
+$$
+
+- Where:
+  - $T_d$ = Direct arrival wavefield (one-way travel time) from the subsurface focusing point (virtual source) to the surface receivers
+  - $T_d(\mathbf{x}_r, \mathbf{x}_f, -t)$ is read as the time-reversed direct arrival at the receiver location $\mathbf{x}_r$ from the virtual source $\mathbf{x}_f$ in the subsurface.
+  - $\mathbf{x}_r$ = Receiver position
+  - $\mathbf{x}_f$ = Focal point position
+- Implementation: Time reversal of direct arrival (Time-reversed direct arrival)
+
+So,
+
+$$
+I(\mathbf{x}_f) = \int_S \int_{-\infty}^{\infty} f_0^+(\mathbf{x}_f, \mathbf{x}_r, t) \cdot g^-(\mathbf{x}_r, \mathbf{x}_f, t) \, dt \, d\mathbf{x}_r
+$$
+
+$$
+I(\mathbf{x}_f) = \int_S \int_{-\infty}^{\infty} T_d(\mathbf{x}_r, \mathbf{x}_f, -t) \cdot g^-(\mathbf{x}_r, \mathbf{x}_f, t) \, dt \, d\mathbf{x}_r
+$$
+
+---
+
+### Interpretation
+
+This imaging condition is a **cross-correlation-type condition**, but instead of using raw reflection data, it uses the **Marchenko-retrieved upgoing Green’s function** $g^-$, which **includes multiple scattering** from below the focal point. It is coupled with the **direct arrival** to efficiently image **reflectors at position $\mathbf{x}_f$**. It is simply a zero-lag cross-correlation between the time-reversed direct arrival and the retrieved upgoing Green’s function, summed over all receivers.
 
 
 
