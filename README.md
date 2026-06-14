@@ -324,8 +324,11 @@ This imaging condition is a **cross-correlation-type condition**, but instead of
 
 ![](plots/image.png)
 
+---
 
+### Key References
 
+1. **Lomas, Angus**, and **Andrew Curtis**. "An introduction to Marchenko methods for imaging." *Geophysics* 84, no. 2 (2019): F35-F45. Download the paper [here](https://pubs.geoscienceworld.org/seg/geophysics/article/84/2/F35/569232/An-introduction-to-Marchenko-methods-for-imagingAn), and the original MATLAB code [here](https://wiki.seg.org/wiki/Software:Marchenko_for_imaging).
 
 
 
