@@ -153,15 +153,6 @@ For whatever reason, you may choose to design your own taper function using the 
    \frac{1}{2} \left[1 + \cos\left(\pi \frac{2i}{\alpha(N-1)} - \frac{2}{\alpha} + 1\right)\right] & (N-1)(1-\frac{\alpha}{2}) \leq i \leq (N-1)
    \end{cases}  \tag{10}
    $$
-       
-<!--     $$
-    w_{\alpha}(n) =
-    \begin{cases}
-    \frac{1}{2} \left[1 + \cos\left(\pi \left(\frac{2n}{\alpha(N-1)} - 1\right)\right)\right] & 0 \leq n \leq \frac{\alpha(N-1)}{2} \\
-    1 & \frac{\alpha(N-1)}{2} < n < (N-1) - \frac{\alpha(N-1)}{2} \\
-    \frac{1}{2} \left[1 + \cos\left(\pi \left(\frac{2n}{\alpha(N-1)} - \frac{2}{\alpha} + 1\right)\right)\right] & (N-1) - \frac{\alpha(N-1)}{2} \leq n \leq N-1
-    \end{cases}
-    $$ -->
 
    - Where $\alpha$ = taper fraction (`tp`)
       
@@ -179,9 +170,9 @@ The Tukey window provides a good compromise between frequency resolution and spe
        
 2. **Pre-direct Arrival Mute**:
 
-   $$
-    G_{\text{final}} = G_{\text{total}} \cdot (1 - \Theta(t))
-   $$
+ $$
+  G_{\text{final}} = G_{\text{total}} \cdot (1 - \Theta(t))
+ $$
    - Removes artifacts before first arrival
 
 ---
