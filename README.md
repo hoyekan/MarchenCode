@@ -19,7 +19,7 @@ The Marchenko method involves several key equations to estimate Green's function
 
 #### a. Downgoing focusing function $f_0^+$ :
 
-$$ f_0^+(\mathbf{x}_f, \mathbf{x}_s, t) = T_d(\mathbf{x}_r, \mathbf{x}_f, -t) \tag{1} $$
+$f_0^+(\mathbf{x}_f, \mathbf{x}_s, t) = T_d(\mathbf{x}_r, \mathbf{x}_f, -t) \tag{1}$
 
 - Where:
   - $T_d$ = Direct arrival wavefield (one-way travel time) from the subsurface focusing point (virtual source) to the surface receivers
