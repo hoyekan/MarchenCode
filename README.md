@@ -18,9 +18,9 @@ The Marchenko method involves several key equations to estimate Green's function
 
 #### a. Downgoing focusing function $f_0^+$ :
 
-<!--$$f_0^+(\mathbf{x}_f, \mathbf{x}_s, t) = T_d(\mathbf{x}_r, \mathbf{x}_f, -t) \tag{1}$$-->
-
-![Equation](https://latex.codecogs.com/svg.latex?f_0^+(\mathbf{x}_f,%20\mathbf{x}_s,%20t)%20=%20T_d(\mathbf{x}_r,%20\mathbf{x}_f,%20-t))
+$$
+f_0^+(\mathbf{x}_f, \mathbf{x}_s, t) = T_d(\mathbf{x}_r, \mathbf{x}_f, -t) \tag{1}
+$$
 
 - Where:
   - $T_d$ = Direct arrival wavefield (one-way travel time) from the subsurface focusing point (virtual source) to the surface receivers
@@ -33,7 +33,7 @@ The Marchenko method involves several key equations to estimate Green's function
 #### b. Upgoing focusing function $f_0^-$ :
 
 $$
-f_0^-(\mathbf{x}_r, \mathbf{x}_f, t) = \Theta(t) \ast \int_S R(\mathbf{x}_r, \mathbf{x}_s, t) \ast f_0^+(\mathbf{x}_f, \mathbf{x}_s, t)  d\mathbf{x}_s   \tag{2}
+f_0^-(\mathbf{x}_r, \mathbf{x}_f, t) = \Theta(t) \ast \int_S R(\mathbf{x}_r, \mathbf{x}_s, t) \ast f_0^+(\mathbf{x}_f, \mathbf{x}_s, t)  d\mathbf{x}_s
 $$
 
 - Where:
@@ -54,7 +54,7 @@ $$
 
 For the first iteration, for instance,
 $$
-m_{1}^{+}(\mathbf{x}_f, \mathbf{x}_s, t) = \Theta(t) \ast \int_S R(\mathbf{x}_r, \mathbf{x}_s, t) \ast f_{0}^{-}(\mathbf{x}_r, \mathbf{x}_f, -t) d\mathbf{x}_r  \tag{3}
+m_{1}^{+}(\mathbf{x}_f, \mathbf{x}_s, t) = \Theta(t) \ast \int_S R(\mathbf{x}_r, \mathbf{x}_s, t) \ast f_{0}^{-}(\mathbf{x}_r, \mathbf{x}_f, -t) d\mathbf{x}_r
 $$
 
 * Where: $\mathbf{x}_f$: focusing point , $\mathbf{x}_s$: source location (or source side in reflection response), and $\mathbf{x}_r$: receiver location (or receiver side in reflection response)
@@ -95,13 +95,13 @@ $$
 #### a. Downgoing Green's function ($G^+$):
 
 $$
-G^+( \mathbf{x}_r, \mathbf{x}_f, t) = f_k^+( \mathbf{x}_r, \mathbf{x}_f, -t) - \int_S R( \mathbf{x}_r, \mathbf{x}_s, t) \ast f_k^-( \mathbf{x}_s, \mathbf{x}_f, -t)  d\mathbf{x}_s \tag{6}
+G^+( \mathbf{x}_r, \mathbf{x}_f, t) = f_k^+( \mathbf{x}_r, \mathbf{x}_f, -t) - \int_S R( \mathbf{x}_r, \mathbf{x}_s, t) \ast f_k^-( \mathbf{x}_s, \mathbf{x}_f, -t)  d\mathbf{x}_s
 $$
 
 #### b. Upgoing Green's function ($G^-$):
 
 $$
-G^-( \mathbf{x}_r, \mathbf{x}_f, t) = -f_k^-( \mathbf{x}_r, \mathbf{x}_f, t) + \int_S R( \mathbf{x}_r, \mathbf{x}_s, t) \ast f_k^+( \mathbf{x}_s, \mathbf{x}_f, t)  d\mathbf{x}_s  \tag{7}
+G^-( \mathbf{x}_r, \mathbf{x}_f, t) = -f_k^-( \mathbf{x}_r, \mathbf{x}_f, t) + \int_S R( \mathbf{x}_r, \mathbf{x}_s, t) \ast f_k^+( \mathbf{x}_s, \mathbf{x}_f, t)  d\mathbf{x}_s
 $$
 
 Note: In numerical implementations, the convolution is often performed in the frequency domain. which is a simple multiplication
