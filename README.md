@@ -318,7 +318,7 @@ This imaging condition is a **cross-correlation-type condition**, but instead of
 
 ##### Figure 3: Estimated Green's Function
 
-![](plots/Green\20Function.png)
+![](plots/Green%20Function.png)
 
 ##### Figure 4: Marchenko Imaging
 
