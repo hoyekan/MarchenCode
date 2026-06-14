@@ -19,7 +19,7 @@ The Marchenko method involves several key equations to estimate Green's function
 #### a. Downgoing focusing function $f_0^+$:
 
 $$
-f_0^+(\mathbf{x}_f, \mathbf{x}_s, t) = T_d(\mathbf{x}_r, \mathbf{x}_f, -t) \tag{1}
+f_0^+(\mathbf{x}_f, \mathbf{x}_s, t) = T_d(\mathbf{x}_r, \mathbf{x}_f, -t)
 $$
 
 - Where:
@@ -144,7 +144,7 @@ For whatever reason, you may choose to design your own taper function using the 
    \frac{1}{2} \left[1 + \cos\left(\pi \frac{2i}{\alpha(N-1)} - 1\right)\right] & 0 \leq i \leq \frac{\alpha(N-1)}{2} \\
    1 & \frac{\alpha(N-1)}{2} < i < (N-1) - \frac{\alpha(N-1)}{2} \\
    \frac{1}{2} \left[1 + \cos\left(\pi \frac{2i}{\alpha(N-1)} - \frac{2}{\alpha} + 1\right)\right] & (N-1) - \frac{\alpha(N-1)}{2} \leq i \leq (N-1)
-   \end{cases}  \tag{9}
+   \end{cases} 
    $$
 
    more compact
@@ -154,7 +154,7 @@ For whatever reason, you may choose to design your own taper function using the 
    \frac{1}{2} \left[1 + \cos\left(\pi \frac{2i}{\alpha(N-1)} - 1\right)\right] & 0 \leq i \leq \frac{\alpha(N-1)}{2} \\
    1 & \frac{\alpha(N-1)}{2} < i < (N-1)(1-\frac{\alpha}{2}) \\
    \frac{1}{2} \left[1 + \cos\left(\pi \frac{2i}{\alpha(N-1)} - \frac{2}{\alpha} + 1\right)\right] & (N-1)(1-\frac{\alpha}{2}) \leq i \leq (N-1)
-   \end{cases}  \tag{10}
+   \end{cases}
    $$
 
    - Where $\alpha$ = taper fraction (`tp`)
