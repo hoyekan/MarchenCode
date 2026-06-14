@@ -305,5 +305,29 @@ $$
 
 This imaging condition is a **cross-correlation-type condition**, but instead of using raw reflection data, it uses the **Marchenko-retrieved upgoing Green’s function** $g^-$, which **includes multiple scattering** from below the focal point. It is coupled with the **direct arrival** to efficiently image **reflectors at position $\mathbf{x}_f$**. It is simply a zero-lag cross-correlation between the time-reversed direct arrival and the retrieved upgoing Green’s function, summed over all receivers.
 
+---
+
+
+##### Figure 1: Input Shot Gather
+
+![](plots/01_Shot_Gathers.png)
+
+##### Figure 2: Focusing Functions (Initial and After 5 Iterations)
+
+![](plots/02_Focusing_Functions.png)
+
+##### Figure 3: Estimated Green's Function
+
+![](plots/Green\20Function.png)
+
+##### Figure 4: Marchenko Imaging
+
+![](plots/image.png)
+
+
+
+
+
+
 
 
