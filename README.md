@@ -112,7 +112,7 @@ Note: In numerical implementations, the convolution is often performed in the fr
 #### c. Total Green's function:
 
 $$
-G_{\text{total}}(\mathbf{x}_r, \mathbf{x}_s, t) =  G^+(\mathbf{x}_f, \mathbf{x}_s, t)  +  G^-(\mathbf{x}_r, \mathbf{x}_f, t) \tag{8}
+G_{\text{total}}(\mathbf{x}_r, \mathbf{x}_s, t) =  G^+(\mathbf{x}_f, \mathbf{x}_s, t)  +  G^-(\mathbf{x}_r, \mathbf{x}_f, t)
 $$
 
 $$
@@ -198,7 +198,7 @@ $$
 This is typically computed via direct **forward modeling** (e.g., finite difference, finite element, or Kirchhoff modeling) using the known subsurface model $c(x, z)$ (velocity field):
 
   $$
-  \left( \frac{1}{c^2(x, z)} \frac{\partial^2}{\partial t^2} - \nabla^2 \right) G(x, z, t) = \delta(x - x_s)\delta(z - z_s)\delta(t)  \tag{11}
+  \left( \frac{1}{c^2(x, z)} \frac{\partial^2}{\partial t^2} - \nabla^2 \right) G(x, z, t) = \delta(x - x_s)\delta(z - z_s)\delta(t)
   $$
 
 Where:
