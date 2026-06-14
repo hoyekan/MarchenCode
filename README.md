@@ -49,14 +49,14 @@ $$
 
 For k = 1 to N iterations:
 - Downgoing component:
-  $$
-  m_{k}^{+}(\mathbf{x}_f, \mathbf{x}_s, t) = \Theta(t) \ast \int_S R(\mathbf{x}_r, \mathbf{x}_s, t) \ast f_{k-1}^{-}(\mathbf{x}_r, \mathbf{x}_f, -t) d\mathbf{x}_r
-  $$
+$$
+m_{k}^{+}(\mathbf{x}_f, \mathbf{x}_s, t) = \Theta(t) \ast \int_S R(\mathbf{x}_r, \mathbf{x}_s, t) \ast f_{k-1}^{-}(\mathbf{x}_r, \mathbf{x}_f, -t) d\mathbf{x}_r
+$$
 
 For the first iteration, for instance,
-  $$
-  m_{1}^{+}(\mathbf{x}_f, \mathbf{x}_s, t) = \Theta(t) \ast \int_S R(\mathbf{x}_r, \mathbf{x}_s, t) \ast f_{0}^{-}(\mathbf{x}_r, \mathbf{x}_f, -t) d\mathbf{x}_r  \tag{3}
-  $$
+$$
+m_{1}^{+}(\mathbf{x}_f, \mathbf{x}_s, t) = \Theta(t) \ast \int_S R(\mathbf{x}_r, \mathbf{x}_s, t) \ast f_{0}^{-}(\mathbf{x}_r, \mathbf{x}_f, -t) d\mathbf{x}_r  \tag{3}
+$$
 
 * Where: $\mathbf{x}_f$: focusing point , $\mathbf{x}_s$: source location (or source side in reflection response), and $\mathbf{x}_r$: receiver location (or receiver side in reflection response)
 
